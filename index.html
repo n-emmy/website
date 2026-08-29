@@ -1,36 +1,82 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nome Cognome | Insegnante di Lingua</title>
+  <title>French Lessons | Native Teacher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Nome Cognome</h1>
-    <p>Insegnante di [Lingua] | Lezioni Individuali e di Gruppo</p>
-  </header>
-
-  <main>
-    <section id="about">
-      <h2>Chi Sono</h2>
-      <p>Insegno il [Lingua] con un metodo comunicativo e materiale personalizzato per studenti di ogni livello.</p>
-    </section>
-
-    <section id="corsi">
-      <h2>I Miei Corsi</h2>
-      <ul>
-        <li>**Conversazione & Fluency:** Per superare il blocco linguistico.</li>
-        <li>**Preparazione Certificazioni:** Esami B1, B2, C1.</li>
-        <li>**Business Language:** Email, presentazioni e colloqui di lavoro.</li>
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="logo">Fran<span>çais</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#contact" class="btn-nav">Book Now</a></li>
       </ul>
-    </section>
+      <div class="lang-switch">
+        <a href="index.html" class="active">EN</a> | 
+        <a href="it.html">IT</a> | 
+        <a href="fr.html">FR</a>
+      </div>
+    </div>
+  </nav>
 
-    <section id="contatti">
-      <h2>Contatti</h2>
-      <p>Scrivimi a <a href="mailto:tuaemail@esempio.com">tuaemail@esempio.com</a> per una lezione di prova gratuita.</p>
-    </section>
-  </main>
+  <section id="home" class="hero fade-in">
+    <div class="hero-text">
+      <h1>Real French,<br>with a Native Teacher.</h1>
+      <p>Personalized online lessons for international students. Discover the beauty of the French language with a natural and effective method.</p>
+      <a href="#about" class="btn-primary">Discover More</a>
+    </div>
+  </section>
+
+  <section id="about" class="about-section fade-in">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Bonjour!</h2>
+          <p>I am a native French teacher. I help students overcome the conversation block, prepare for exams, or learn the language for business and travel.</p>
+          <p>In my approach, grammar is important, but oral practice is fundamental. Watch my presentation video to get to know me and hear my accent!</p>
+        </div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/INSERISCI_ID_QUI" title="Presentation Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="courses" class="courses-section fade-in">
+    <div class="container">
+      <h2>My Courses</h2>
+      <div class="courses-grid">
+        <div class="course-card">
+          <h3>Conversation</h3>
+          <p>Get lost in chats, not in words. Lessons focused on fluency, pronunciation, and daily vocabulary.</p>
+        </div>
+        <div class="course-card">
+          <h3>DELF/DALF Certification</h3>
+          <p>Targeted preparation to pass official exams. Simulations, writing techniques, and listening exercises.</p>
+        </div>
+        <div class="course-card">
+          <h3>Business French</h3>
+          <p>French for work. How to write formal emails, conduct meetings, and tackle job interviews.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="container footer-content">
+      <h2>Ready to start?</h2>
+      <p>Contact me to schedule a free 30-minute trial lesson.</p>
+      <a href="mailto:tuaemail@esempio.com" class="btn-primary">Send an Email</a>
+      <p class="copyright">© 2024 Your Name. Crafted with care and passion.</p>
+    </div>
+  </footer>
 </body>
 </html>
