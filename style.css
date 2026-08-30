@@ -31,11 +31,34 @@ h1, h2, h3, .logo { font-family: 'Playfair Display', serif; color: var(--marrone
 .lang-switch a:hover { color: var(--marrone-chiaro); }
 
 /* Hero */
-.hero { height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; background-color: var(--crema-scuro); padding: 0 20px; }
+.hero { min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; background-color: var(--crema-scuro); padding: 80px 20px; }
 .hero h1 { font-size: 3.5rem; margin-bottom: 20px; line-height: 1.2; }
 .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px auto; }
 .btn-primary { display: inline-block; background-color: var(--marrone-medio); color: #fff; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 30px; transition: transform 0.3s, background-color 0.3s; }
 .btn-primary:hover { background-color: var(--marrone-chiaro); transform: translateY(-3px); }
+
+/* Contenitore Bottoni Hero */
+.action-buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+
+/* Bottone Contornato Elegante (per Instagram) */
+.btn-outline { display: inline-block; background-color: transparent; color: var(--marrone-medio); padding: 12px 30px; text-decoration: none; font-weight: bold; border: 2px solid var(--marrone-medio); border-radius: 30px; transition: all 0.3s ease; }
+.btn-outline:hover { background-color: var(--marrone-medio); color: var(--crema-chiaro); transform: translateY(-3px); }
+.btn-primary i, .btn-outline i { margin-right: 8px; font-size: 1.1rem; }
+
+/* Barra dei Numeri */
+.stats-banner { background-color: var(--marrone-medio); color: var(--crema-chiaro); padding: 40px 0; text-align: center; }
+.stats-container { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px; }
+.stat-item h3 { color: var(--crema-chiaro); font-size: 2.5rem; margin-bottom: 5px; }
+.stat-item p { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9; }
+
+/* Sezione Risorse Gratuite */
+.freebies-section { padding: 80px 0; background-color: var(--crema-chiaro); text-align: center; }
+.section-subtitle { margin-bottom: 40px; font-size: 1.2rem; }
+.freebie-card { background-color: #fff; border-top: none; border-bottom: 4px solid var(--marrone-chiaro); padding: 40px 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s; }
+.freebie-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(92, 64, 51, 0.1); }
+.freebie-icon { font-size: 2.5rem; color: var(--marrone-chiaro); margin-bottom: 15px; }
+.freebie-link { display: inline-block; margin-top: 15px; color: var(--marrone-medio); font-weight: bold; text-decoration: none; transition: color 0.3s; }
+.freebie-link:hover { color: var(--marrone-chiaro); }
 
 /* Chi Sono */
 .about-section { padding: 100px 0; background-color: var(--crema-chiaro); }
