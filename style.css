@@ -45,6 +45,12 @@ h1, h2, h3, .logo { font-family: 'Playfair Display', serif; color: var(--marrone
 .btn-outline:hover { background-color: var(--marrone-medio); color: var(--crema-chiaro); transform: translateY(-3px); }
 .btn-primary i, .btn-outline i { margin-right: 8px; font-size: 1.1rem; }
 
+/* SVG Decorativi */
+.decor-svg { width: 45px; height: 45px; vertical-align: middle; margin-left: 15px; color: var(--marrone-chiaro); transform: rotate(10deg); transition: transform 0.3s ease; }
+.decor-svg:hover { transform: rotate(-5deg) scale(1.1); color: var(--marrone-medio); }
+.title-flex { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 40px; }
+.title-flex h2 { margin-bottom: 0 !important; }
+
 /* Barra dei Numeri */
 .stats-banner { background-color: var(--marrone-medio); color: var(--crema-chiaro); padding: 40px 0; text-align: center; }
 .stats-container { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px; }
@@ -63,7 +69,7 @@ h1, h2, h3, .logo { font-family: 'Playfair Display', serif; color: var(--marrone
 /* Chi Sono */
 .about-section { padding: 100px 0; background-color: var(--crema-chiaro); }
 .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-.about-text h2 { font-size: 2.5rem; margin-bottom: 20px; }
+.about-text h2 { font-size: 2.5rem; display: flex; align-items: center; margin-bottom: 20px; }
 .about-text p { margin-bottom: 15px; font-size: 1.1rem; }
 
 /* Video */
