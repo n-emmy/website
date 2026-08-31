@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articoli | French with Emmy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="preload">
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="nav-controls">
+        <div class="lang-switch">
+          <a href="../articles.html">EN</a> | 
+          <a href="articles.html" class="active">IT</a> | 
+          <a href="../fr/articles.html">FR</a>
+        </div>
+        <button id="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+      </div>
+      <a href="index.html" class="logo">French with <span>Emmy</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">Su di me</a></li>
+        <li><a href="index.html#resources">Risorse Gratuite</a></li>
+        <li><a href="book_a_lesson.html" class="btn-nav">Prenota una Lezione</a></li>
+        <li><a href="articles.html" class="nav-active">Articoli</a></li>
+        <li><a href="reviews.html">Recensioni</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="shop.html">Negozio</a></li>
+        <li><a href="#contact">Contatti</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="courses-section fade-in">
+    <div class="container">
+      <h2>Articoli e Consigli Linguistici</h2>
+      <p class="section-subtitle">Approfondimenti, consigli grammaticali e guide culturali per padroneggiare il francese in modo naturale.</p>
+      <div class="courses-grid">
+        <div class="course-card">
+          <div>
+            <h3>5 consigli per capire i madrelingua</h3>
+            <p>Scopri i metodi migliori per migliorare il tuo ascolto e stare al passo con il francese parlato velocemente.</p>
+          </div>
+          <a href="#" class="freebie-link">Leggi l'articolo &rarr;</a>
+        </div>
+        <div class="course-card">
+          <div>
+            <h3>Falsi amici comuni da evitare</h3>
+            <p>Una lista di parole che sembrano simili in inglese e francese ma hanno significati completamente diversi.</p>
+          </div>
+          <a href="#" class="freebie-link">Leggi l'articolo &rarr;</a>
+        </div>
+        <div class="course-card">
+          <div>
+            <h3>Padroneggiare il congiuntivo francese</h3>
+            <p>Demistifica il congiuntivo con esempi del mondo reale e schemi semplici.</p>
+          </div>
+          <a href="#" class="freebie-link">Leggi l'articolo &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="container footer-content">
+      <h2>Pronto a iniziare?</h2>
+      <p>Contattami per programmare una lezione di prova gratuita di 30 minuti.</p>
+      <a href="mailto:tuaemail@esempio.com" class="btn-primary">Invia un'email</a>
+      <p class="copyright">© 2026 French with Emmy. Tutti i diritti riservati. | Creato da Kostas B.</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener("load", () => document.body.classList.remove("preload"));
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const icon = themeToggle ? themeToggle.querySelector('i') : null;
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      if (icon) icon.classList.replace('fa-moon', 'fa-sun');
+    }
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const isDark = body.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        if (icon) icon.classList.replace(isDark ? 'fa-moon' : 'fa-sun', isDark ? 'fa-sun' : 'fa-moon');
+      });
+    }
+  </script>
+</body>
+</html>

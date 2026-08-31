@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prenota una Lezione | French with Emmy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="preload">
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="nav-controls">
+        <div class="lang-switch">
+          <a href="../book_a_lesson.html">EN</a> | 
+          <a href="book_a_lesson.html" class="active">IT</a> | 
+          <a href="../fr/book_a_lesson.html">FR</a>
+        </div>
+        <button id="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+      </div>
+      <a href="index.html" class="logo">French with <span>Emmy</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">Su di me</a></li>
+        <li><a href="index.html#resources">Risorse Gratuite</a></li>
+        <li><a href="book_a_lesson.html" class="btn-nav nav-active">Prenota una Lezione</a></li>
+        <li><a href="articles.html">Articoli</a></li>
+        <li><a href="reviews.html">Recensioni</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="shop.html">Negozio</a></li>
+        <li><a href="#contact">Contatti</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="courses-section fade-in">
+    <div class="container">
+      <h2>Prenota una Lezione</h2>
+      <p class="section-subtitle">Scegli il pacchetto più adatto ai tuoi obiettivi e inizia a parlare francese con sicurezza.</p>
+      <div class="courses-grid">
+        <div class="course-card">
+          <div>
+            <h3>Lezione di Prova (30 min)</h3>
+            <p>Valuta il tuo livello, discuti i tuoi obiettivi di apprendimento e testa il metodo di insegnamento interattivo.</p>
+          </div>
+          <a href="https://preply.com/IL_TUO_PROFILO" target="_blank" class="btn-primary" style="margin-top: 15px;">Prenota Prova</a>
+        </div>
+        <div class="course-card">
+          <div>
+            <h3>Francese Conversazionale</h3>
+            <p>Concentrati sulla fluidità naturale, il perfezionamento dell'accento e il vocabolario quotidiano in sessioni interattive di 60 minuti.</p>
+          </div>
+          <a href="https://preply.com/IL_TUO_PROFILO" target="_blank" class="btn-primary" style="margin-top: 15px;">Prenota Sessione</a>
+        </div>
+        <div class="course-card">
+          <div>
+            <h3>Preparazione Esami DELF / DALF</h3>
+            <p>Preparazione strutturata che copre i moduli orale, di ascolto e scritto con feedback mirati.</p>
+          </div>
+          <a href="https://preply.com/IL_TUO_PROFILO" target="_blank" class="btn-primary" style="margin-top: 15px;">Prenota Preparazione</a>
+        </div>
+        <div class="course-card">
+          <div>
+            <h3>Francese Commerciale</h3>
+            <p>Coaching mirato per comunicazione professionale, email, riunioni e preparazione ai colloqui di lavoro.</p>
+          </div>
+          <a href="https://preply.com/IL_TUO_PROFILO" target="_blank" class="btn-primary" style="margin-top: 15px;">Prenota Business</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="container footer-content">
+      <h2>Pronto a iniziare?</h2>
+      <p>Contattami per programmare una lezione di prova gratuita di 30 minuti.</p>
+      <a href="mailto:tuaemail@esempio.com" class="btn-primary">Invia un'email</a>
+      <p class="copyright">© 2026 French with Emmy. Tutti i diritti riservati. | Creato da Kostas B.</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener("load", () => document.body.classList.remove("preload"));
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const icon = themeToggle ? themeToggle.querySelector('i') : null;
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      if (icon) icon.classList.replace('fa-moon', 'fa-sun');
+    }
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const isDark = body.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        if (icon) icon.classList.replace(isDark ? 'fa-moon' : 'fa-sun', isDark ? 'fa-sun' : 'fa-moon');
+      });
+    }
+  </script>
+</body>
+</html>

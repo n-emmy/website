@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles | French with Emmy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="preload">
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="nav-controls">
+        <div class="lang-switch">
+          <a href="../articles.html">EN</a> | 
+          <a href="../it/articles.html">IT</a> | 
+          <a href="articles.html" class="active">FR</a>
+        </div>
+        <button id="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+      </div>
+      <a href="index.html" class="logo">French with <span>Emmy</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">À propos</a></li>
+        <li><a href="index.html#resources">Ressources Gratuites</a></li>
+        <li><a href="book_a_lesson.html" class="btn-nav">Réserver un cours</a></li>
+        <li><a href="articles.html" class="nav-active">Articles</a></li>
+        <li><a href="reviews.html">Avis</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="shop.html">Boutique</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="courses-section fade-in">
+    <div class="container">
+      <h2>Articles & Conseils Linguistiques</h2>
+      <p class="section-subtitle">Analyses, conseils grammaticaux et guides culturels pour maîtriser le français naturellement.</p>
+      <div class="courses-grid">
+        <div class="course-card">
+          <div>
+            <h3>5 astuces pour comprendre les natifs</h3>
+            <p>Découvrez les meilleures méthodes pour améliorer votre écoute et suivre le français parlé rapidement.</p>
+          </div>
+          <a href="#" class="freebie-link">Lire l'article &rarr;</a>
+        </div>
+        <div class="course-card">
+          <div>
+            <h3>Les faux amis à éviter</h3>
+            <p>Une liste de mots qui se ressemblent en anglais et en français mais dont le sens est complètement différent.</p>
+          </div>
+          <a href="#" class="freebie-link">Lire l'article &rarr;</a>
+        </div>
+        <div class="course-card">
+          <div>
+            <h3>Maîtriser le subjonctif</h3>
+            <p>Démystifiez le subjonctif avec des exemples concrets et des modèles simples.</p>
+          </div>
+          <a href="#" class="freebie-link">Lire l'article &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="container footer-content">
+      <h2>Prêt à commencer ?</h2>
+      <p>Contactez-moi pour planifier un cours d'essai gratuit de 30 minutes.</p>
+      <a href="mailto:tuaemail@esempio.com" class="btn-primary">Envoyer un e-mail</a>
+      <p class="copyright">© 2026 French with Emmy. Tous droits réservés. | Créé par Kostas B.</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener("load", () => document.body.classList.remove("preload"));
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const icon = themeToggle ? themeToggle.querySelector('i') : null;
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      if (icon) icon.classList.replace('fa-moon', 'fa-sun');
+    }
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const isDark = body.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        if (icon) icon.classList.replace(isDark ? 'fa-moon' : 'fa-sun', isDark ? 'fa-sun' : 'fa-moon');
+      });
+    }
+  </script>
+</body>
+</html>
