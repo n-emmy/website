@@ -22,6 +22,9 @@
         <button id="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
       </div>
       <a href="index.html" class="logo">French with <span>Emmy</span></a>
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Apri menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <ul class="nav-links">
         <li><a href="index.html#about">About Me</a></li>
         <li><a href="index.html#resources">Free Resources</a></li>
@@ -39,34 +42,50 @@
     <div class="container">
       <h2>Book a Lesson</h2>
       <p class="section-subtitle">Choose the package that fits your goals and start speaking French with confidence.</p>
+      
+      <!-- Sezione Istruzioni -->
+      <div style="background-color: var(--card-bg); padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px var(--shadow-color); margin-bottom: 40px; text-align: left;">
+        <h3 style="color: var(--marrone-chiaro); margin-bottom: 15px;"><i class="fa-solid fa-calendar-check"></i> How to book a lesson</h3>
+        <ol style="margin-left: 20px; margin-bottom: 20px; font-size: 1.1rem;">
+          <li style="margin-bottom: 10px;">Send the payment for your chosen lesson via <a href="https://paypal.me/IL_TUO_PAYPAL" target="_blank" style="color: var(--marrone-medio); font-weight: bold; text-decoration: underline;">PayPal</a>.</li>
+          <li style="margin-bottom: 10px;">Send me an email at <a href="mailto:nicolleemmy@gmail.com" style="color: var(--marrone-medio); font-weight: bold; text-decoration: underline;">nicolleemmy@gmail.com</a> with the payment receipt.</li>
+          <li style="margin-bottom: 10px;">I will reply with a calendar link so you can choose the date and time of our lesson!</li>
+        </ol>
+        <div style="background-color: var(--crema-scuro); padding: 15px; border-radius: 8px; border-left: 4px solid var(--marrone-chiaro);">
+          <p style="font-weight: bold; color: var(--marrone-medio); margin: 0;">
+            <i class="fa-solid fa-gift"></i> Good to know: The first 30-minute trial lesson is completely FREE! No payment is required, just send me an email to schedule it.
+          </p>
+        </div>
+      </div>
+
       <div class="courses-grid">
         <div class="course-card">
           <div>
             <h3>Trial Lesson (30 min)</h3>
             <p>Assess your level, discuss your learning objectives, and test the interactive teaching method.</p>
           </div>
-          <a href="https://preply.com/IL_TUO_PROFILO" target="_blank" class="btn-primary" style="margin-top: 15px;">Book Trial</a>
+          <a href="mailto:nicolleemmy@gmail.com?subject=Free%20Trial%20Lesson" class="btn-primary" style="margin-top: 15px;">Book for Free</a>
         </div>
         <div class="course-card">
           <div>
             <h3>Conversational French</h3>
             <p>Focus on natural fluency, accent refinement, and daily vocabulary in interactive 60-minute sessions.</p>
           </div>
-          <a href="https://preply.com/IL_TUO_PROFILO" target="_blank" class="btn-primary" style="margin-top: 15px;">Book Session</a>
+          <a href="https://paypal.me/IL_TUO_PAYPAL" target="_blank" class="btn-primary" style="margin-top: 15px;">Pay with PayPal</a>
         </div>
         <div class="course-card">
           <div>
             <h3>DELF / DALF Exam Prep</h3>
             <p>Structured preparation covering oral, listening, and written exam modules with dedicated feedback.</p>
           </div>
-          <a href="https://preply.com/IL_TUO_PROFILO" target="_blank" class="btn-primary" style="margin-top: 15px;">Book Prep</a>
+          <a href="https://paypal.me/IL_TUO_PAYPAL" target="_blank" class="btn-primary" style="margin-top: 15px;">Pay with PayPal</a>
         </div>
         <div class="course-card">
           <div>
             <h3>Business French</h3>
             <p>Targeted coaching for professional communication, emails, meetings, and job interview prep.</p>
           </div>
-          <a href="https://preply.com/IL_TUO_PROFILO" target="_blank" class="btn-primary" style="margin-top: 15px;">Book Business</a>
+          <a href="https://paypal.me/IL_TUO_PAYPAL" target="_blank" class="btn-primary" style="margin-top: 15px;">Pay with PayPal</a>
         </div>
       </div>
     </div>
@@ -76,7 +95,7 @@
     <div class="container footer-content">
       <h2>Ready to start?</h2>
       <p>Contact me to schedule a free 30-minute trial lesson.</p>
-      <a href="mailto:tuaemail@esempio.com" class="btn-primary">Send an Email</a>
+      <a href="mailto:nicolleemmy@gmail.com" class="btn-primary">Send an Email</a>
       <p class="copyright">© 2026 French with Emmy. All rights reserved. | Made by Kostas B.</p>
     </div>
   </footer>
@@ -99,5 +118,6 @@
       });
     }
   </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
